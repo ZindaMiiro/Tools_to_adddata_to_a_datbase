@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Prescriptions</title>
+    <style>
+        body {
+            background-color: green;
+            color: lightblue;
+        }
+
+        h2 {
+            text-align: center;
+            padding: 20px;
+            background-color: #f0f0f0;
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: inline-block;
+            width: 120px;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="date"] {
+            padding: 5px;
+            border-radius: 5px;
+            border: none;
+            margin-bottom: 10px;
+        }
+
+        input[type="submit"] {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            text-align: center;
+            text-decoration: none;
+            background-color: lightgreen;
+            color: black;
+            border-radius: 8px;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h2>Enter Patient Prescription</h2>
+    <form action="insert_prescription.php" method="POST">
+        <label for="patient_name">Patient Name:</label>
+        <input type="text" name="patient_name" id="patient_name" required><br>
+
+        <label for="Drug_Name">Drug Name:</label>
+        <input type="text" name="Drug_Name" id="Drug_Name" required><br>
+
+        <label for="Doctor_Name">Doctor Name:</label>
+        <input type="text" name="Doctor_Name" id="Doctor_Name" required><br>
+
+        <label for="Dosage">Dosage:</label>
+        <input type="text" name="Dosage" id="Dosage" required><br>
+
+        <label for="Start_date">Start Date:</label>
+        <input type="date" name="Start_date" id="Start_date" required><br>
+
+        <label for="End_date">End Date:</label>
+        <input type="date" name="End_date" id="End_date" required><br>
+
+        <input type="submit" value="Add Prescription">
+    </form>
+</body>
+</html>
